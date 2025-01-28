@@ -1,0 +1,686 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --primary-text-color: #e7e9ea;
+    --secondary-text-color: #71767b;
+
+    --theme-m-color: #1d9bf0;
+    /* --theme-m-color: #f91880; */
+    /* --theme-m-color: #7856ff; */
+    /* --theme-m-color: #00a770; */
+
+    --primary-background-color: black;
+    --secondary-background-color: #5c5c5c;
+    --border-color: gray;
+
+    --button-color : #d7dbdc;
+    /* --hover-button-color : #C11119; */
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+    font-family: 'Poppins', 'Roboto';
+
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: var(--theme-m-color);
+}
+
+li{
+    list-style: none;
+}
+
+/* utility calsses */
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.head-Hover{
+    text-decoration-color: var(--theme-m-color);
+}
+
+.head-Hover:hover{
+    text-decoration: underline;
+    text-underline-offset: 1.2rem;
+    text-decoration-thickness: 4px;
+    
+    text-decoration-color: var(--theme-m-color);
+}
+
+.post-Head-Hover:hover{
+    text-decoration: underline;
+}
+
+.bgHover:hover{
+    background-color: rgba(43, 43, 43, 0.637);
+    transition: .22s ease-out;
+}
+
+.borderG{
+    border: 1px solid rgb(49, 49, 49);
+}
+
+.border-t-b{
+    border-top: 1px solid rgb(49, 49, 49);
+    border-bottom: 1px solid rgb(49, 49, 49);
+}
+
+.borderR{
+    border-radius: 22px;
+}
+
+.icon-color-svg {
+    width: 22px;
+    fill: var(--theme-m-color);
+}
+
+.test{
+    width: 100px;
+    height: 50px;
+    outline: 1px solid white;
+}
+
+/* utility ends */
+
+.mainContainer{
+    width: 78em;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    /* grid-template-columns: 1fr 3fr; */
+    position: relative;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.mainContainer::-webkit-scrollbar {
+    width: 0; /* Set scrollbar width to 0 */
+    background: transparent; /* Optional: make scrollbar background transparent */
+}
+
+/* Nav Bar */
+
+.NavBar{
+    position: sticky;
+    top: 0px;
+    width: 20%;
+}
+
+.leftSide{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary-background-color);
+    padding: 0 2px;
+}
+
+.navBar{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.topSide{
+    width: 100%;
+}
+
+.Logo{
+    width: 100%;
+    height: 3.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+.logo{
+    width: 1.7rem;
+    position: relative;
+    left: .5rem;
+}
+
+.menuItems{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: .8rem;
+    font-size: 20px;
+}
+
+.options{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.pngW{
+    width: 32px;
+}
+
+.items{
+    width: fit-content;
+    height: 100%;
+    text-wrap: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    gap: 1rem;
+    padding: .5rem 2rem .5rem .5rem;
+    border-radius: 14rem;
+}
+
+/* Experiment */
+/* 
+.home{
+    width: 100%;
+    padding: 0px;
+}
+
+.home>span{
+    padding: .5rem;
+    border-radius: 22px;
+} */
+
+.btn{
+    margin: 10px auto;
+}
+
+.btnStyle{
+    text-align: center;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.btnPost{ 
+    padding: .9em 6.2em;
+}
+
+.account{
+    width: 95%;
+    padding: 4%;
+    margin: 0 auto 2px auto;
+    border-radius: 5rem;
+}
+
+.account>div{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    text-align: start;
+}
+
+.accIcon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.accIcon>img{
+    width: 38px;
+    height: 38px;
+}
+
+.accName{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.accNameTop{
+    font-size: .95em;
+    font-weight: 500;
+}
+
+.username{
+    font-size: .88em;
+    color: gray;
+}
+
+.threeDots>img{
+    width: .9em;
+    margin: 0 8px 0 10px;
+}
+
+.H-P:hover{
+    cursor: pointer;
+}
+
+/* Main Content */
+
+.content{
+    display: flex;
+    width: 80%;
+    height: fit-content;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 34px;
+    margin-left: 12px;
+    padding-right: 12px;
+}
+
+.left-section {
+    width: 61%;
+    height: 100%;
+}
+
+/* For you | Following */
+.head{
+    position: sticky;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.726);
+    backdrop-filter: blur(8px);
+}
+
+.head>div{
+    width: 50%;
+    height: 3.5rem;
+}
+
+/* Posting TextArea */
+.posting{
+    height: 7.5rem;
+    justify-content: flex-start;
+    align-items: start;
+    padding: 0 .81rem;
+}
+
+.leftIcon{
+    width: fit-content;
+    height: 84%;
+    align-items: flex-start;
+    padding: .8rem .5rem .5rem .5rem;
+}
+
+.leftIcon > img{
+    height: 2.5rem;
+}
+
+.rightTextArea{
+    width: 32rem;
+    height: 4rem;
+}
+.textArea{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.cp-tA{
+    width: 100%;
+    height: 1.8rem;
+    border: none;
+    background-color: black;
+    margin: 10px 0 0 0;
+    resize: none;
+    font-size: 1.3rem;
+    font-family: sans-serif;
+    color: white;
+}
+
+.bottomOptions{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.BOptions{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.options-B{
+    width: 28px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.options-B>img{
+    width: 1.3rem;
+}
+
+.postBtnS{
+    font-size: 14px;
+    padding: .61rem 1.2rem;
+}
+
+.showPostSec{
+    height: 100%;
+    margin-top: 10px;
+    padding: .21rem;
+}
+
+.showPostSec>a{
+    color: var(--theme-m-color);
+}
+
+
+/* articles Sec */
+
+.posts{
+    flex-direction: column;
+    margin-top: 8px;
+}
+
+.Post{
+    width: 100%;
+    padding: 6px 0 14px 0;
+}
+
+.outArticle{
+    width: calc(100% - .7rem);
+    height: fit-content;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: .91rem;
+    margin-top: 8px;
+}
+
+.leftSideIcon{
+    width: 55px;
+    height: 100%;
+    margin-left: 12px;
+}
+.leftSideIcon > a > img{
+    width: 100%;
+}
+
+.rightSidePostContent{
+    width: 100%;
+    font-size: 14px;
+}
+
+
+.psotHead{
+    justify-content: space-between;
+}
+.leftHead{
+    justify-content: flex-start;
+    gap: 4px;
+    color: var(--secondary-text-color);
+}
+.acc-Name{
+    color: var(--primary-text-color);
+}
+.acc-Mark{
+    gap: 4px;
+}
+.miniLogo > img{
+    width: 18px;
+}
+.dot{
+    text-align: center;
+    margin-top: -5px;
+}
+.rightHead > svg{
+    width: 1.3rem;
+    fill: var(--secondary-background-color);
+}
+.rightHead:hover svg {
+    fill: var(--theme-m-color);
+}
+
+.postDescription{
+    padding-right: 18px;
+}
+.postDescription>span{
+    text-align: start;
+    text-wrap: wrap;
+    width: 100%;
+}
+
+.actualPost>img{
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.psotOptions{
+    width: 100%;
+    margin-top: 12px;
+    justify-content: space-between;
+}
+
+.leftPostOptions{
+    width: 75%;
+    justify-content: space-between;
+}
+
+.rightPostOptions{
+    width: 25%;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.postOptionsAnchor{
+    width: fit-content;
+    gap: 3px;
+    font-size: 13.5px;
+    color: var(--secondary-text-color);
+    transition: .12s ease-in-out;
+}
+.postOptionsAnchor:hover {
+    color: #1d9bf0;
+}
+
+.postOptionsAnchor > svg {
+    width: 19px;
+    fill: var(--secondary-background-color);
+    transition: .2s ease-out;
+}
+.postOptionsAnchor:hover svg {
+    fill: #1d9bf0;
+}
+
+/* Post options Hover effect */
+.post_hover2:hover {
+    color: #00a770;
+}
+.post_hover2:hover svg {
+    fill: #00a770;
+}
+
+.post_hover3:hover {
+    color: #f91880;
+}
+.post_hover3:hover svg {
+    fill: #f91880;
+}
+
+
+
+
+/* Right Section */
+.right-section{
+    max-width: 39%;
+    max-height: 100vh;
+}
+
+.right-section > div {
+    margin-top: 1rem;
+    border-radius: 18px;
+}
+.right-section h3 {
+    width: fit-content;
+    font-size: 20px;
+}
+
+/* Search bar */
+.Search-outter-box {
+    width: 348px;
+    height: 55px;
+    margin-top: 0 !important;
+    padding-top: 6px !important;
+    border-radius: 0px;
+    background-color: black;
+    position: fixed;
+    top: 0px;
+}
+
+.search-bar {
+    margin-top: 0 !important;
+    width: 100%;
+    height: calc(48px - 2px);
+    justify-content: flex-start;
+    border-radius: 22px !important;
+    background-color: black;
+    transition: all .05s ease-in-out;
+
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+}
+.search-bar:focus-within {
+    width: calc(100% - 4px);
+    border-color: var(--theme-m-color);
+    border-width: 2px;
+}
+
+.search-icon {
+    width: calc(22px + 13px);
+    height: 100%;
+}
+.search-icon > svg {
+    width: 30px;
+    height: 100%;
+    padding-left: 13px;
+    text-align: center;
+    opacity: 55%;
+}
+
+.search-input {
+    width: 100%;
+    height: 100%;
+}
+
+.search-input > input {
+    width: calc(100% - 2px);
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+    padding-left: 2px;
+    outline: none;
+}
+
+/* Subscribe section */
+.subscribe-card {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 10px;
+    padding-left: 14px;
+    gap: 10px;
+    margin-top: 65px !important;
+}
+
+.subscribe-card p {
+    width: 92%;
+    font-size: 15px;
+}
+
+.subs-btn > button {
+    font-size: 16px;
+    color: white;
+    background-color: var(--theme-m-color);
+}
+.subs-btn > button:hover {
+    opacity: 90%;
+    transition: all .15s ease-out;
+}
+
+/* What's Happening */
+.whats-happening {
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.whats-happening > div {
+    width: calc(100%);
+    padding: 13px;
+}
+
+.happening-head {
+    text-align: start;
+}
+
+.news {
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+}
+.news > div {
+    width: 100%;
+}
+
+.top-news {
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.top-news img {
+    width: 80px;
+}
+.news-desc p {
+    font-size: small;
+    color: var(--secondary-text-color);
+}
+
+.news-box {
+    color: var(--secondary-text-color);
+}
+.news-box h4 {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+}
+
+.news-head {
+    justify-content: space-between;
+}
+.news-box-desc {
+    font-weight: 400;
+    font-size: 14px;
+}
+.news-box-status {
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.news-show-more {
+    font-size: 14px;
+}
+
+/* Who to Follwo Section */
+
+
+
